@@ -9,10 +9,13 @@ function test() {
 }
 
 
-function connexion(){
-  let noms=prompt("Quel est ton nom?")
-  let mdps=prompt("Quel est ton mot de passe?")
-  if (noms===localStorage.getItem("nom") && mdps===localStorage.getItem("mdp")){
-  alert('Connexion')
-}
+function connexion() {
+    let noms = prompt("Quel est ton nom ?");
+    let mdps = prompt("Quel est ton mot de passe ?");
+
+    if (localStorage.getItem(noms) === mdps) {
+        alert("Connexion");
+    } else {
+        alert("Nom ou mot de passe incorrect");
+    }
 }
